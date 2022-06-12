@@ -1,0 +1,14 @@
+Options -Indexes
+Options +ExecCGI
+#Options -Includes
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.+)$ index.php/$1 [L]
+RewriteEngine On
+RewriteRule ^core/.*$ - [F,L]
+RewriteRule ^app/views/.*$ - [F,L]
+
+RewriteRule ^app/controllers/.*$ - [F,L]

@@ -1,0 +1,41 @@
+{
+    "name": "zeinab/cms",
+    "type": "project",
+    "description": "The zeinab cms Framework.",
+    "keywords": [
+        "framework",
+        "zeinabCms"
+    ],
+    "license": "NOL",
+    "require": {
+        "php": "^7.2.5"
+    },
+    "require-dev": {
+
+        "phpunit/phpunit": "^8.5"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "cms": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+  "psr-4": {
+  "lib\\cms": "src/"
+  },
+  "files": [
+  "src/functions.php"
+  ]
+  },
+  "autoload-dev": {
+  "psr-4": {
+  "MyVendorName\\MyProject\\Tests": "tests/"
+  }
+  }
+
+}
